@@ -1,0 +1,46 @@
+.page-header{
+    text-align: center;
+}
+
+#left {
+    background-color: grey;
+    padding: 20px;
+}
+
+
+label{
+    display: block;
+    margin-top: 20px;
+}
+
+input, textarea {
+    margin-top: 5px;
+}
+
+#submit {
+    margin: 50px 0;
+}
+
+input[type=text], textarea {
+    width: 100%;
+}
+
+.name {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.message {
+    font-size: 18px;
+}
+
+.delete {
+    margin-top: 10px;
+}
+
+.messageBlock {
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px 20px;
+    background-color: lightgrey;
+}
