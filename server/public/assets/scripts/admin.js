@@ -20,7 +20,7 @@ $(document).ready(function(){
 function getData(){
     $.ajax({
         type: "GET",
-        url: "/post/data",
+        url: "/admin/data",
         success: function(data){
             updateDOM(data);
         }
@@ -30,7 +30,7 @@ function getData(){
 function postData(values){
     $.ajax({
         type: "POST",
-        url: "/post/data",
+        url: "/admin/data",
         data: values,
         success: function(){
             getData();
