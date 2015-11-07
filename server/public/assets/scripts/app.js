@@ -1,21 +1,19 @@
 $(document).ready(function(){
     getData();
-    $("#messageForm").submit(submitMessage);
-});
+    $("#messageForm").submit(function(event){
+        event.preventDefault();
+        var values = {};
 
-function submitMessage(){
-    event.preventDefault();
-    var values = {};
+        $.each($(this).serializeArray(), function(i, field){
+            values[field.name] = field.value;
+        });
 
-    $.each($(this).serializeArray(), function(i, field){
-        values[field.name] = field.value;
+        $("#messageForm").find("input[type=text]").val("");
+        $("#messageForm").find("textarea[type=text]").val("");
+
+        postData(values);
     });
-
-    $("#messageForm").find("input[type=text]").val("");
-    $("#messageForm").find("textarea[type=text]").val("");
-
-    postData(values);
-}
+});
 
 function getData(){
     $.ajax({

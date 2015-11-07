@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var pg = require('pg');
-var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/message_board';
+var connectionString = process.env.DATABASE_URL || 'postgres://yyjenuywavekng:dgqpsqdry0h5Xwe3nnvP2L7tCC@ec2-107-21-219-201.compute-1.amazonaws.com:5432/d89k8b7focnbdu';
 
 router.get('/data', function(req,res){
     var results = [];
